@@ -36,7 +36,7 @@ jobs:
           echo '{"hasCompletedOnboarding":true}' > ~/.claude.json
           output_file="$(mktemp)"
           set +e
-          claude -p "hi" --model haiku --no-session-persistence >"$output_file" 2>&1
+          claude -p "hi" --no-session-persistence >"$output_file" 2>&1
           status=$?
           set -e
           cat "$output_file"
